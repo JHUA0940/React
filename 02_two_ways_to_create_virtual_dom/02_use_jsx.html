@@ -20,8 +20,12 @@
 
 <!--use babel convert jsx to js-->
 <script type="text/babel">
-    // 1.create virtual DOM
-    const VDOM = <h1>Hello, React</h1> 
+    // 1.create virtual DOM, dont use '', it is not a string
+    const VDOM = (
+        <h1 id="title">
+            <span>Hello, React</span>
+        </h1>
+    )
     // 2.render the virtual DOM to webpage
     ReactDOM.render(VDOM, document.getElementById("test"));
 </script>
